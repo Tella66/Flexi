@@ -1,0 +1,131 @@
+.fpm-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px;
+  background-color: #f7fafc;
+  border-radius: 24px;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Image container */
+.fpm-image-container.small {
+  position: relative;
+  width: 200px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Image (semi-circle) */
+.fpm-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 20px;
+  display: block;
+}
+
+/* Icons follow image shape */
+.icon-circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  aspect-ratio: 10 / 14; /* maintains 200x280 proportions */
+  pointer-events: none;
+}
+
+/* Icon style */
+.circle-icon {
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  background: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Icon positions: curved on right */
+.icon-frame-1 { top: -4%; left: 30%; }
+.icon-frame-2 { top: 15%; left: 70%; }
+.icon-frame-3 { top: 40%; left: 88%; }
+.icon-frame-4 { top: 70%; left: 88%; }
+.icon-frame-5 { top: 98%; left: 75%; }
+.icon-frame-6 { top: 118%; left: 30%; }
+
+/* Content */
+.fpm-content {
+  flex: 1;
+  max-width: 600px;
+  color: #3e5773;
+}
+
+.fpm-content h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.fpm-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* Buttons */
+.fpm-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.fpm-buttons .primary {
+  background-color: #3e5773;
+  color: white;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.fpm-buttons .secondary {
+  background-color: white;
+  color: #3e5773;
+  border: 1px solid #3e5773;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .fpm-section {
+    flex-direction: column;
+    padding: 32px 24px;
+  }
+
+  .fpm-content {
+    padding-top: 32px;
+  }
+
+  .fpm-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .fpm-buttons .primary,
+  .fpm-buttons .secondary {
+    width: 100%;
+    text-align: center;
+  }
+}
