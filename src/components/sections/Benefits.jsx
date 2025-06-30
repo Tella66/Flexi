@@ -4,26 +4,25 @@ import Image from 'next/image';
 const features = [
   {
     title: 'Boosts Buyer Confidence',
-    subtitle: 'Prompt fulfillment = better ratings'
+    subtitle: 'Prompt fulfillment = better ratings',
   },
   {
     title: 'Reliable Order Fulfillment',
-    subtitle: 'Smooth delivery, satisfied customers'
+    subtitle: 'Smooth delivery, satisfied customers',
   },
   {
     title: 'Inventory in Your Hands',
-    subtitle: 'Full control, real-time stock visibility'
+    subtitle: 'Full control, real-time stock visibility',
   },
   {
     title: 'Tailored to Your Flow',
-    subtitle: 'Works with your Process, your rules'
-  }
+    subtitle: 'Works with your Process, your rules',
+  },
 ];
 
 export default function HeroFeatures() {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-[1200px] mx-auto mt-0">
-   
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-[1200px] mx-auto mt-0 justify-items-center">
       {features.map((feature, index) => (
         <div
           key={index}
