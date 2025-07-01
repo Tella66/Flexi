@@ -7,7 +7,7 @@ export const viewport = {
 
 export const metadata = {
   title: 'Flexi business',
-  description: 'Flexi business solutioin',
+  description: 'Flexi business solution',
   icons: {
     icon: [
       { url: '/favicon.ico', type: 'image/x-icon' }

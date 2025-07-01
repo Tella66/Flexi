@@ -1,16 +1,21 @@
+'use client';
 import React from 'react';
+import Image from 'next/image';
+import { ArrowLeft, ArrowRight } from 'lucide-react';
 
 export default function ClientStories() {
   return (
     <section className="bg-[#29394C] px-4 sm:px-8 lg:px-20 py-16 flex flex-col items-center gap-12">
-      {/* Section Header */}
-      <div className="flex justify-center items-center gap-4">
+      {/* Section Header: Icon beside text */}
+      <div className="flex items-center gap-3">
+        <Image 
+          src="/images/frame78.png" // Make sure this path is correct
+          alt="Section Icon"
+          width={28}
+          height={28}
+          className="object-contain"
+        />
         <h2 className="text-white font-medium text-[26px] sm:text-[30px]">Customer Stories</h2>
-        <div className="w-9 h-9 bg-white rounded flex justify-center items-center">
-          <svg viewBox="0 0 36 36" className="w-6 h-6">
-            <path d="M4.5 4.5l27 27M4.5 31.5l27-27" stroke="white" strokeWidth="1.25" />
-          </svg>
-        </div>
       </div>
 
       {/* Testimonials */}
@@ -48,7 +53,10 @@ export default function ClientStories() {
             <div className="flex gap-1">
               {[...Array(5)].map((_, i) => (
                 <svg key={i} viewBox="0 0 21 21" className="w-5 h-5">
-                  <polygon points="10.5,1 13.5,7 21,7 15.75,11.5 18,18 10.5,14 3,18 5.25,11.5 0,7 6.5,7" fill="#FFDA00" />
+                  <polygon
+                    points="10.5,1 13.5,7 21,7 15.75,11.5 18,18 10.5,14 3,18 5.25,11.5 0,7 6.5,7"
+                    fill="#FFDA00"
+                  />
                 </svg>
               ))}
             </div>
@@ -56,20 +64,13 @@ export default function ClientStories() {
         ))}
       </div>
 
-      {/* Navigation Buttons with Opposite Arrows */}
-      <div className="flex gap-4">
-        {/* Left Arrow Button */}
-        <button className="bg-white border border-white rounded-full w-12 h-12 flex items-center justify-center">
-          <svg viewBox="0 0 24 24" className="w-5 h-5 rotate-180">
-            <path d="M5 12l14 0M12 5l7 14" stroke="#1E2A38" strokeWidth="1.25" />
-          </svg>
+      {/* Navigation Arrows */}
+      <div className="flex gap-4 mt-6">
+        <button className="w-12 h-12 rounded-full border border-white flex items-center justify-center text-white hover:bg-white hover:text-[#1E2A38] transition">
+          <ArrowLeft className="w-5 h-5" />
         </button>
-
-        {/* Right Arrow Button */}
-        <button className="bg-white border border-white rounded-full w-12 h-12 flex items-center justify-center">
-          <svg viewBox="0 0 24 24" className="w-5 h-5">
-            <path d="M5 12l14 0M12 5l7 14" stroke="#1E2A38" strokeWidth="1.25" />
-          </svg>
+        <button className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-[#1E2A38] hover:bg-gray-200 transition">
+          <ArrowRight className="w-5 h-5" />
         </button>
       </div>
     </section>
