@@ -1,4 +1,3 @@
-// DO NOT add 'use client' here
 import Navbar from '../../components/common/Navbar';
 import Footer from '../../components/common/Footer';
 import FSC from '../../components/common/FSC';

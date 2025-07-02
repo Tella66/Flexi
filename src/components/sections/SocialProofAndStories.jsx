@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function SocialProofAndStories() {
   const clients = ["Altrust Pharmacy", "MedPlus", "Pure Marketplace", "GreenLeaf Logistics"];
@@ -51,9 +52,11 @@ export default function SocialProofAndStories() {
             height={36}
             className="mr-[15px]"
           />
-          <h2 className="text-[24px] lg:text-[30px] font-inter font-medium leading-[30px] lg:leading-[37px] text-accent">
-            Customer Stories
-          </h2>
+      <Link href="/screens/successStories">
+        <h2 className="text-[24px] lg:text-[30px] font-inter font-medium leading-[30px] lg:leading-[37px] text-accent cursor-pointer hover:underline transition">
+          Customer Stories
+      </h2>
+     </Link>
         </div>
         <div className="flex flex-wrap gap-[24px] justify-center">
           {stories.map((story, index) => (

@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 
 import React, { useState } from 'react';
 
@@ -107,9 +108,11 @@ export default function Home() {
             logistics to HR and customer communication, our growing ecosystem of integrations helps you
             streamline operations, reduce manual work, and scale faster
           </p>
-          <button className="bg-slate-700 text-white px-6 py-2 rounded-md hover:bg-slate-800 transition">
-            Become a Partner
-          </button>
+          <Link href="/screens/partnerform" passHref>
+             <div className="bg-slate-700 text-white px-6 py-2 rounded-md hover:bg-slate-800 transition cursor-pointer inline-block">
+               Become a Partner
+                </div>
+             </Link>
         </div>
       </main>
 

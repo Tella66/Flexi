@@ -2,6 +2,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 
 export default function ClientStories() {
   return (
@@ -15,7 +16,11 @@ export default function ClientStories() {
           height={28}
           className="object-contain"
         />
-        <h2 className="text-white font-medium text-[26px] sm:text-[30px]">Customer Stories</h2>
+        <Link href="/screens/successStories">
+           <h2 className="text-white font-medium text-[26px] sm:text-[30px] cursor-pointer hover:underline">
+                Customer Stories
+              </h2>
+         </Link>
       </div>
 
       {/* Testimonials */}
